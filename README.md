@@ -440,7 +440,7 @@ Exit codes:
 make test
 ```
 
-180 tests, 8.6 seconds, no network. They cover the mailbox reader against the
+185 tests, 8.6 seconds, no network. They cover the mailbox reader against the
 generated ground truth, the rule loader's refusals one by one, collisions and
 idempotency at the planner level, and the four acceptance behaviours end to end
 (`tests/test_cli.py`): the dry run changing not one byte, the second run being a
@@ -459,11 +459,11 @@ holding no `uv`:
 
 | | |
 |---|---|
-| dead clone → filed output (`make run`) | 5.8 s |
-| dead clone → `make test` (180 tests) | 14.9 s |
+| dead clone → filed output (`make run`) | 5.9 s |
+| dead clone → `make test` (185 tests) | 14.4 s |
 | `make plan` / `make run`, venv warm | 0.4 s / 0.5 s |
 | second `make run` | 0.5 s, tree byte-identical |
-| `make demo` from nothing | 1 m 33 s |
+| `make demo` from nothing | 1 m 45 s |
 | `.venv` / demo toolchain | 6.8 MB / 231 MB |
 
 The failure path is driven deliberately too: with a `curl` shimmed to exit 7 and
@@ -480,7 +480,7 @@ make demo
 
 Rebuilds `demo/out/demo.gif` and `demo/out/demo.mp4` — two encodes of one
 capture — headless from nothing, fetching uv, vhs, ttyd and
-ffmpeg into `demo/.toolchain/` — in about 90 seconds on a machine with none of
+ffmpeg into `demo/.toolchain/` — in under two minutes on a machine with none of
 them. The clip is 31 s against a 35 s budget that `record.sh` enforces by
 measuring the result, so a tape that grows fails the build instead of quietly
 shipping a two-minute GIF.
@@ -525,7 +525,7 @@ inbox_filer/
   cli.py                  arguments and exit codes
 rules/office.json         the rules, meant to be read
 fixtures/                 the synthetic mailbox and the script that writes it
-tests/                    180 tests
+tests/                    185 tests
 demo/                     recording scaffolding, shared across pieces
 ```
 

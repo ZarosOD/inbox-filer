@@ -24,7 +24,7 @@
 # with their reasons, the counts, and the proof.
 #
 # Beat 4 uses `--per-dir 0`, which shows folders with a count instead of
-# filenames: seventeen lines rather than thirty-one, and the shape of the
+# filenames: seventeen lines rather than fifty-four, and the shape of the
 # cabinet is what this beat is about. The filenames get beat 5 to themselves.
 #
 # Beat 5 uses `--tail` for the same reason the dry run does. The index is in
