@@ -1,0 +1,35 @@
+From: Meadowlark Utilities <noreply@meadowlark-utilities.example>
+To: office@rookery-demo.example
+Subject: Receipt for payment received =?utf-8?b?4oCU?= account 8821
+Date: Wed, 08 Apr 2026 07:30:00 +0000
+Message-ID: <fixture-012@rookery-demo.example>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="=-fixture-012-="
+
+--=-fixture-012-=
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Thank you. Your receipt is attached.
+
+--=-fixture-012-=
+Content-Type: application/pdf
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="receipt-8821.pdf"
+MIME-Version: 1.0
+
+JVBERi0xLjQKMSAwIG9iago8PCAvVHlwZSAvQ2F0YWxvZyAvUGFnZXMgMiAwIFIgPj4KZW5kb2Jq
+CjIgMCBvYmoKPDwgL1R5cGUgL1BhZ2VzIC9LaWRzIFszIDAgUl0gL0NvdW50IDEgPj4KZW5kb2Jq
+CjMgMCBvYmoKPDwgL1R5cGUgL1BhZ2UgL1BhcmVudCAyIDAgUiAvTWVkaWFCb3ggWzAgMCA1OTUg
+ODQyXSAvUmVzb3VyY2VzIDw8IC9Gb250IDw8IC9GMSA1IDAgUiA+PiA+PiAvQ29udGVudHMgNCAw
+IFIgPj4KZW5kb2JqCjQgMCBvYmoKPDwgL0xlbmd0aCAxNjMgPj4Kc3RyZWFtCkJUIC9GMSAxMSBU
+ZiA1NiA3MjAgVGQgKFJFQ0VJUFQgODgyMSkgVGogRVQKQlQgL0YxIDExIFRmIDU2IDcwMiBUZCAo
+KSBUaiBFVApCVCAvRjEgMTEgVGYgNTYgNjg0IFRkIChQYWlkIGluIGZ1bGwpIFRqIEVUCkJUIC9G
+MSAxMSBUZiA1NiA2NjYgVGQgKFNhbXBsZSBkYXRhKSBUaiBFVAoKZW5kc3RyZWFtCmVuZG9iago1
+IDAgb2JqCjw8IC9UeXBlIC9Gb250IC9TdWJ0eXBlIC9UeXBlMSAvQmFzZUZvbnQgL0hlbHZldGlj
+YSA+PgplbmRvYmoKeHJlZgowIDYKMDAwMDAwMDAwMCA2NTUzNSBmIAowMDAwMDAwMDA5IDAwMDAw
+IG4gCjAwMDAwMDAwNTggMDAwMDAgbiAKMDAwMDAwMDExNSAwMDAwMCBuIAowMDAwMDAwMjQxIDAw
+MDAwIG4gCjAwMDAwMDA0NTUgMDAwMDAgbiAKdHJhaWxlcgo8PCAvU2l6ZSA2IC9Sb290IDEgMCBS
+ID4+CnN0YXJ0eHJlZgo1MjUKJSVFT0YK
+
+--=-fixture-012-=--

@@ -1,0 +1,23 @@
+From: Jo Parkin <jo.parkin@bellweather-signs.example>
+To: office@rookery-demo.example
+Subject: Invoice 3120 =?utf-8?b?4oCU?= meeting notes
+Date: Wed, 01 Apr 2026 09:00:00 +0000
+Message-ID: <fixture-031@rookery-demo.example>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="=-fixture-031-="
+
+--=-fixture-031-=
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Notes attached.
+
+--=-fixture-031-=
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="meeting-notes.txt"
+MIME-Version: 1.0
+Content-Type: text/plain; charset="x-unknown-9000"
+
+c3ludGhldGljIG5vdGVzDQo=
+
+--=-fixture-031-=--

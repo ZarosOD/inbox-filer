@@ -1,0 +1,23 @@
+From: Harborline Logistics <billing@harborline-logistics.example>
+To: office@rookery-demo.example
+Subject: Invoice 7788 =?utf-8?b?4oCU?= notes
+Date: Fri, 27 Mar 2026 09:45:00 +0000
+Message-ID: <fixture-027@rookery-demo.example>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="=-fixture-027-="
+
+--=-fixture-027-=
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Notes attached.
+
+--=-fixture-027-=
+Content-Type: text/plain
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="../../../etc/passwd-notes.txt"
+MIME-Version: 1.0
+
+c3ludGhldGljIG5vdGVzLCBub3RoaW5nIHNlbnNpdGl2ZQ0K
+
+--=-fixture-027-=--

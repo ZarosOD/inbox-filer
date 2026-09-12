@@ -1,0 +1,38 @@
+From: Northgate Supplies <accounts@northgate-supplies.example>
+To: office@rookery-demo.example
+Subject: Invoice 10042 for February
+Date: Tue, 03 Mar 2026 09:12:00 +0000
+Message-ID: <fixture-001@rookery-demo.example>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="=-fixture-001-="
+
+--=-fixture-001-=
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Invoice attached. Please remit by the due date.
+
+--=-fixture-001-=
+Content-Type: application/pdf
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="invoice-10042.pdf"
+MIME-Version: 1.0
+
+JVBERi0xLjQKMSAwIG9iago8PCAvVHlwZSAvQ2F0YWxvZyAvUGFnZXMgMiAwIFIgPj4KZW5kb2Jq
+CjIgMCBvYmoKPDwgL1R5cGUgL1BhZ2VzIC9LaWRzIFszIDAgUl0gL0NvdW50IDEgPj4KZW5kb2Jq
+CjMgMCBvYmoKPDwgL1R5cGUgL1BhZ2UgL1BhcmVudCAyIDAgUiAvTWVkaWFCb3ggWzAgMCA1OTUg
+ODQyXSAvUmVzb3VyY2VzIDw8IC9Gb250IDw8IC9GMSA1IDAgUiA+PiA+PiAvQ29udGVudHMgNCAw
+IFIgPj4KZW5kb2JqCjQgMCBvYmoKPDwgL0xlbmd0aCAzMzYgPj4Kc3RyZWFtCkJUIC9GMSAxMSBU
+ZiA1NiA3MjAgVGQgKElOVk9JQ0UgMTAwNDIpIFRqIEVUCkJUIC9GMSAxMSBUZiA1NiA3MDIgVGQg
+KCkgVGogRVQKQlQgL0YxIDExIFRmIDU2IDY4NCBUZCAoTm9ydGhnYXRlIFN1cHBsaWVzIEx0ZCBc
+KHNhbXBsZSBkYXRhXCkpIFRqIEVUCkJUIC9GMSAxMSBUZiA1NiA2NjYgVGQgKDE3IEZpY3Rpb25h
+bCBXYXksIEV4YW1wbGV0b24pIFRqIEVUCkJUIC9GMSAxMSBUZiA1NiA2NDggVGQgKCkgVGogRVQK
+QlQgL0YxIDExIFRmIDU2IDYzMCBUZCAoQW1vdW50IGR1ZTogozkxNS4wMCkgVGogRVQKQlQgL0Yx
+IDExIFRmIDU2IDYxMiBUZCAoVGVybXM6IDMwIGRheXMpIFRqIEVUCgplbmRzdHJlYW0KZW5kb2Jq
+CjUgMCBvYmoKPDwgL1R5cGUgL0ZvbnQgL1N1YnR5cGUgL1R5cGUxIC9CYXNlRm9udCAvSGVsdmV0
+aWNhID4+CmVuZG9iagp4cmVmCjAgNgowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAwMDAwMDkgMDAw
+MDAgbiAKMDAwMDAwMDA1OCAwMDAwMCBuIAowMDAwMDAwMTE1IDAwMDAwIG4gCjAwMDAwMDAyNDEg
+MDAwMDAgbiAKMDAwMDAwMDYyOCAwMDAwMCBuIAp0cmFpbGVyCjw8IC9TaXplIDYgL1Jvb3QgMSAw
+IFIgPj4Kc3RhcnR4cmVmCjY5OAolJUVPRgo=
+
+--=-fixture-001-=--

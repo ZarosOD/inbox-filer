@@ -1,0 +1,34 @@
+From: Quayside Print <hello@quayside-print.example>
+To: office@rookery-demo.example
+Subject: Invoice 2210 =?utf-8?b?4oCU?= proof copy
+Date: Thu, 26 Mar 2026 15:00:00 +0000
+Message-ID: <fixture-025@rookery-demo.example>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="=-fixture-025-="
+
+--=-fixture-025-=
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Proof attached.
+
+--=-fixture-025-=
+Content-Type: application/pdf
+Content-Transfer-Encoding: base64
+MIME-Version: 1.0
+Content-Disposition: attachment
+
+JVBERi0xLjQKMSAwIG9iago8PCAvVHlwZSAvQ2F0YWxvZyAvUGFnZXMgMiAwIFIgPj4KZW5kb2Jq
+CjIgMCBvYmoKPDwgL1R5cGUgL1BhZ2VzIC9LaWRzIFszIDAgUl0gL0NvdW50IDEgPj4KZW5kb2Jq
+CjMgMCBvYmoKPDwgL1R5cGUgL1BhZ2UgL1BhcmVudCAyIDAgUiAvTWVkaWFCb3ggWzAgMCA1OTUg
+ODQyXSAvUmVzb3VyY2VzIDw8IC9Gb250IDw8IC9GMSA1IDAgUiA+PiA+PiAvQ29udGVudHMgNCAw
+IFIgPj4KZW5kb2JqCjQgMCBvYmoKPDwgL0xlbmd0aCAxMTIgPj4Kc3RyZWFtCkJUIC9GMSAxMSBU
+ZiA1NiA3MjAgVGQgKFBST09GKSBUaiBFVApCVCAvRjEgMTEgVGYgNTYgNzAyIFRkICgpIFRqIEVU
+CkJUIC9GMSAxMSBUZiA1NiA2ODQgVGQgKFNhbXBsZSBkYXRhKSBUaiBFVAoKZW5kc3RyZWFtCmVu
+ZG9iago1IDAgb2JqCjw8IC9UeXBlIC9Gb250IC9TdWJ0eXBlIC9UeXBlMSAvQmFzZUZvbnQgL0hl
+bHZldGljYSA+PgplbmRvYmoKeHJlZgowIDYKMDAwMDAwMDAwMCA2NTUzNSBmIAowMDAwMDAwMDA5
+IDAwMDAwIG4gCjAwMDAwMDAwNTggMDAwMDAgbiAKMDAwMDAwMDExNSAwMDAwMCBuIAowMDAwMDAw
+MjQxIDAwMDAwIG4gCjAwMDAwMDA0MDQgMDAwMDAgbiAKdHJhaWxlcgo8PCAvU2l6ZSA2IC9Sb290
+IDEgMCBSID4+CnN0YXJ0eHJlZgo0NzQKJSVFT0YK
+
+--=-fixture-025-=--

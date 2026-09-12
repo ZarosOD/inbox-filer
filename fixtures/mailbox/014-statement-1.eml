@@ -1,0 +1,36 @@
+From: Northbank <statements@northbank.example>
+To: office@rookery-demo.example
+Subject: Your statement is ready =?utf-8?b?4oCU?= 02 Feb 2026
+Date: Mon, 02 Feb 2026 06:00:00 +0000
+Message-ID: <fixture-014@rookery-demo.example>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="=-fixture-014-="
+
+--=-fixture-014-=
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Your statement is attached.
+
+--=-fixture-014-=
+Content-Type: application/pdf
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="statement-2026-02.pdf"
+MIME-Version: 1.0
+
+JVBERi0xLjQKMSAwIG9iago8PCAvVHlwZSAvQ2F0YWxvZyAvUGFnZXMgMiAwIFIgPj4KZW5kb2Jq
+CjIgMCBvYmoKPDwgL1R5cGUgL1BhZ2VzIC9LaWRzIFszIDAgUl0gL0NvdW50IDEgPj4KZW5kb2Jq
+CjMgMCBvYmoKPDwgL1R5cGUgL1BhZ2UgL1BhcmVudCAyIDAgUiAvTWVkaWFCb3ggWzAgMCA1OTUg
+ODQyXSAvUmVzb3VyY2VzIDw8IC9Gb250IDw8IC9GMSA1IDAgUiA+PiA+PiAvQ29udGVudHMgNCAw
+IFIgPj4KZW5kb2JqCjQgMCBvYmoKPDwgL0xlbmd0aCAyMjggPj4Kc3RyZWFtCkJUIC9GMSAxMSBU
+ZiA1NiA3MjAgVGQgKFNUQVRFTUVOVCAyMDI2LTAyKSBUaiBFVApCVCAvRjEgMTEgVGYgNTYgNzAy
+IFRkICgpIFRqIEVUCkJUIC9GMSAxMSBUZiA1NiA2ODQgVGQgKE9wZW5pbmcgYmFsYW5jZSAwLjAw
+KSBUaiBFVApCVCAvRjEgMTEgVGYgNTYgNjY2IFRkIChDbG9zaW5nIGJhbGFuY2UgMC4wMCkgVGog
+RVQKQlQgL0YxIDExIFRmIDU2IDY0OCBUZCAoU2FtcGxlIGRhdGEpIFRqIEVUCgplbmRzdHJlYW0K
+ZW5kb2JqCjUgMCBvYmoKPDwgL1R5cGUgL0ZvbnQgL1N1YnR5cGUgL1R5cGUxIC9CYXNlRm9udCAv
+SGVsdmV0aWNhID4+CmVuZG9iagp4cmVmCjAgNgowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAwMDAw
+MDkgMDAwMDAgbiAKMDAwMDAwMDA1OCAwMDAwMCBuIAowMDAwMDAwMTE1IDAwMDAwIG4gCjAwMDAw
+MDAyNDEgMDAwMDAgbiAKMDAwMDAwMDUyMCAwMDAwMCBuIAp0cmFpbGVyCjw8IC9TaXplIDYgL1Jv
+b3QgMSAwIFIgPj4Kc3RhcnR4cmVmCjU5MAolJUVPRgo=
+
+--=-fixture-014-=--

@@ -1,0 +1,38 @@
+From: Harborline Logistics <billing@harborline-logistics.example>
+To: office@rookery-demo.example
+Subject: Invoice 11142 for February
+Date: Thu, 12 Mar 2026 09:19:00 +0000
+Message-ID: <fixture-005@rookery-demo.example>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="=-fixture-005-="
+
+--=-fixture-005-=
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Invoice attached. Please remit by the due date.
+
+--=-fixture-005-=
+Content-Type: application/pdf
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="invoice-11142.pdf"
+MIME-Version: 1.0
+
+JVBERi0xLjQKMSAwIG9iago8PCAvVHlwZSAvQ2F0YWxvZyAvUGFnZXMgMiAwIFIgPj4KZW5kb2Jq
+CjIgMCBvYmoKPDwgL1R5cGUgL1BhZ2VzIC9LaWRzIFszIDAgUl0gL0NvdW50IDEgPj4KZW5kb2Jq
+CjMgMCBvYmoKPDwgL1R5cGUgL1BhZ2UgL1BhcmVudCAyIDAgUiAvTWVkaWFCb3ggWzAgMCA1OTUg
+ODQyXSAvUmVzb3VyY2VzIDw8IC9Gb250IDw8IC9GMSA1IDAgUiA+PiA+PiAvQ29udGVudHMgNCAw
+IFIgPj4KZW5kb2JqCjQgMCBvYmoKPDwgL0xlbmd0aCAzMzcgPj4Kc3RyZWFtCkJUIC9GMSAxMSBU
+ZiA1NiA3MjAgVGQgKElOVk9JQ0UgMTExNDIpIFRqIEVUCkJUIC9GMSAxMSBUZiA1NiA3MDIgVGQg
+KCkgVGogRVQKQlQgL0YxIDExIFRmIDU2IDY4NCBUZCAoTm9ydGhnYXRlIFN1cHBsaWVzIEx0ZCBc
+KHNhbXBsZSBkYXRhXCkpIFRqIEVUCkJUIC9GMSAxMSBUZiA1NiA2NjYgVGQgKDE3IEZpY3Rpb25h
+bCBXYXksIEV4YW1wbGV0b24pIFRqIEVUCkJUIC9GMSAxMSBUZiA1NiA2NDggVGQgKCkgVGogRVQK
+QlQgL0YxIDExIFRmIDU2IDYzMCBUZCAoQW1vdW50IGR1ZTogozI3NTcuMDApIFRqIEVUCkJUIC9G
+MSAxMSBUZiA1NiA2MTIgVGQgKFRlcm1zOiAzMCBkYXlzKSBUaiBFVAoKZW5kc3RyZWFtCmVuZG9i
+ago1IDAgb2JqCjw8IC9UeXBlIC9Gb250IC9TdWJ0eXBlIC9UeXBlMSAvQmFzZUZvbnQgL0hlbHZl
+dGljYSA+PgplbmRvYmoKeHJlZgowIDYKMDAwMDAwMDAwMCA2NTUzNSBmIAowMDAwMDAwMDA5IDAw
+MDAwIG4gCjAwMDAwMDAwNTggMDAwMDAgbiAKMDAwMDAwMDExNSAwMDAwMCBuIAowMDAwMDAwMjQx
+IDAwMDAwIG4gCjAwMDAwMDA2MjkgMDAwMDAgbiAKdHJhaWxlcgo8PCAvU2l6ZSA2IC9Sb290IDEg
+MCBSID4+CnN0YXJ0eHJlZgo2OTkKJSVFT0YK
+
+--=-fixture-005-=--

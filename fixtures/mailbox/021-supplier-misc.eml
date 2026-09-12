@@ -1,0 +1,25 @@
+From: Northgate Supplies <accounts@northgate-supplies.example>
+To: office@rookery-demo.example
+Subject: Updated price list
+Date: Mon, 30 Mar 2026 10:00:00 +0000
+Message-ID: <fixture-021@rookery-demo.example>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="=-fixture-021-="
+
+--=-fixture-021-=
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+New prices from April.
+
+--=-fixture-021-=
+Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="price-list-april.xlsx"
+MIME-Version: 1.0
+
+UEsDBBQAAAAAAAAAIQBco+UZFAAAABQAAAAKAAAAc2FtcGxlLnR4dHN5bnRoZXRpYyBwcmljZSBs
+aXN0UEsBAhQDFAAAAAAAAAAhAFyj5RkUAAAAFAAAAAoAAAAAAAAAAAAAAIABAAAAAHNhbXBsZS50
+eHRQSwUGAAAAAAEAAQA4AAAAPAAAAAAA
+
+--=-fixture-021-=--

@@ -1,0 +1,587 @@
+{
+  "generated_by": "fixtures/generate_mailbox.py",
+  "seed": 20260312,
+  "messages": [
+    {
+      "file": "001-invoice-northgate-supplies-10042.eml",
+      "sender_name": "Northgate Supplies",
+      "sender_email": "accounts@northgate-supplies.example",
+      "subject": "Invoice 10042 for February",
+      "date": "Wed, 03 Mar 2026 09:12:00 +0000",
+      "note": "",
+      "attachments": [
+        {
+          "declared_filename": "invoice-10042.pdf",
+          "content_type": "application/pdf",
+          "size": 881,
+          "sha256": "1ad0918ca1641e3ec5dbc8e8ffcfc4cce841078639014f1d7af62320345f808b",
+          "decodable": true
+        }
+      ]
+    },
+    {
+      "file": "002-invoice-northgate-supplies-10142.eml",
+      "sender_name": "Northgate Supplies",
+      "sender_email": "accounts@northgate-supplies.example",
+      "subject": "Invoice 10142 for February",
+      "date": "Wed, 12 Mar 2026 09:19:00 +0000",
+      "note": "",
+      "attachments": [
+        {
+          "declared_filename": "invoice-10142.pdf",
+          "content_type": "application/pdf",
+          "size": 882,
+          "sha256": "86d6f5810919c4cd328109a7d36d01dbd0efbd67764ddb769491e2b12d9280de",
+          "decodable": true
+        }
+      ]
+    },
+    {
+      "file": "003-invoice-northgate-supplies-10242.eml",
+      "sender_name": "Northgate Supplies",
+      "sender_email": "accounts@northgate-supplies.example",
+      "subject": "Invoice 10242 for February",
+      "date": "Wed, 21 Mar 2026 09:26:00 +0000",
+      "note": "",
+      "attachments": [
+        {
+          "declared_filename": "invoice-10242.pdf",
+          "content_type": "application/pdf",
+          "size": 882,
+          "sha256": "f10269b5dad3c135e496951cfecbe155e18902ecf0d4324a0292ce81571386c6",
+          "decodable": true
+        }
+      ]
+    },
+    {
+      "file": "004-invoice-harborline-logistics-11042.eml",
+      "sender_name": "Harborline Logistics",
+      "sender_email": "billing@harborline-logistics.example",
+      "subject": "Invoice 11042 for February",
+      "date": "Wed, 03 Mar 2026 09:12:00 +0000",
+      "note": "",
+      "attachments": [
+        {
+          "declared_filename": "invoice-11042.pdf",
+          "content_type": "application/pdf",
+          "size": 881,
+          "sha256": "df9c829efcd42d19523d78d6dc3e8d8a1279d9010b155f0f2843574e916d4123",
+          "decodable": true
+        }
+      ]
+    },
+    {
+      "file": "005-invoice-harborline-logistics-11142.eml",
+      "sender_name": "Harborline Logistics",
+      "sender_email": "billing@harborline-logistics.example",
+      "subject": "Invoice 11142 for February",
+      "date": "Wed, 12 Mar 2026 09:19:00 +0000",
+      "note": "",
+      "attachments": [
+        {
+          "declared_filename": "invoice-11142.pdf",
+          "content_type": "application/pdf",
+          "size": 882,
+          "sha256": "ad0a6d8c3213df8940fce63b4e81519ae618e3c55c92a2e457476f2a31a8bb51",
+          "decodable": true
+        }
+      ]
+    },
+    {
+      "file": "006-invoice-harborline-logistics-11242.eml",
+      "sender_name": "Harborline Logistics",
+      "sender_email": "billing@harborline-logistics.example",
+      "subject": "Invoice 11242 for February",
+      "date": "Wed, 21 Mar 2026 09:26:00 +0000",
+      "note": "",
+      "attachments": [
+        {
+          "declared_filename": "invoice-11242.pdf",
+          "content_type": "application/pdf",
+          "size": 881,
+          "sha256": "786b1e4c59f5cd2792bd862c4da01d6c72515693f0f506751033916f0c7ee925",
+          "decodable": true
+        }
+      ]
+    },
+    {
+      "file": "007-invoice-quayside-print-12042.eml",
+      "sender_name": "Quayside Print",
+      "sender_email": "hello@quayside-print.example",
+      "subject": "Invoice 12042 for February",
+      "date": "Wed, 03 Mar 2026 09:12:00 +0000",
+      "note": "",
+      "attachments": [
+        {
+          "declared_filename": "invoice-12042.pdf",
+          "content_type": "application/pdf",
+          "size": 882,
+          "sha256": "34df9760cb5ddb28c0ad5e40a6a004bf1ee274f3b23316cb0ec59a1da327a99d",
+          "decodable": true
+        }
+      ]
+    },
+    {
+      "file": "008-invoice-quayside-print-12142.eml",
+      "sender_name": "Quayside Print",
+      "sender_email": "hello@quayside-print.example",
+      "subject": "Invoice 12142 for February",
+      "date": "Wed, 12 Mar 2026 09:19:00 +0000",
+      "note": "",
+      "attachments": [
+        {
+          "declared_filename": "invoice-12142.pdf",
+          "content_type": "application/pdf",
+          "size": 882,
+          "sha256": "39c2a5318372c2e094db86e1ac425961f0ffc5a9a0d646b2ddea154df4903934",
+          "decodable": true
+        }
+      ]
+    },
+    {
+      "file": "009-invoice-quayside-print-12242.eml",
+      "sender_name": "Quayside Print",
+      "sender_email": "hello@quayside-print.example",
+      "subject": "Invoice 12242 for February",
+      "date": "Wed, 21 Mar 2026 09:26:00 +0000",
+      "note": "",
+      "attachments": [
+        {
+          "declared_filename": "invoice-12242.pdf",
+          "content_type": "application/pdf",
+          "size": 882,
+          "sha256": "df7f241840237425ee58b45513c502452b7672308c34f596bf1aca2ddfbc2cda",
+          "decodable": true
+        }
+      ]
+    },
+    {
+      "file": "010-receipt-0.eml",
+      "sender_name": "Meadowlark Utilities",
+      "sender_email": "noreply@meadowlark-utilities.example",
+      "subject": "Receipt for payment received — account 8801",
+      "date": "Mon, 06 Apr 2026 07:30:00 +0000",
+      "note": "",
+      "attachments": [
+        {
+          "declared_filename": "receipt-8801.pdf",
+          "content_type": "application/pdf",
+          "size": 708,
+          "sha256": "08ecac842bae4e89bcf716b795e133ef12ca6f491e516a483e71871df67692a4",
+          "decodable": true
+        }
+      ]
+    },
+    {
+      "file": "011-receipt-1.eml",
+      "sender_name": "Meadowlark Utilities",
+      "sender_email": "noreply@meadowlark-utilities.example",
+      "subject": "Receipt for payment received — account 8811",
+      "date": "Mon, 07 Apr 2026 07:30:00 +0000",
+      "note": "",
+      "attachments": [
+        {
+          "declared_filename": "receipt-8811.pdf",
+          "content_type": "application/pdf",
+          "size": 708,
+          "sha256": "68296477a6ebaea375172b01d830e706952cb81f3d3b3f364514db19f0a2617e",
+          "decodable": true
+        }
+      ]
+    },
+    {
+      "file": "012-receipt-2.eml",
+      "sender_name": "Meadowlark Utilities",
+      "sender_email": "noreply@meadowlark-utilities.example",
+      "subject": "Receipt for payment received — account 8821",
+      "date": "Mon, 08 Apr 2026 07:30:00 +0000",
+      "note": "",
+      "attachments": [
+        {
+          "declared_filename": "receipt-8821.pdf",
+          "content_type": "application/pdf",
+          "size": 708,
+          "sha256": "d71ca49556410405d1b9609720cda806bb027f51f97b2cfcb02920091ad53184",
+          "decodable": true
+        }
+      ]
+    },
+    {
+      "file": "013-statement-0.eml",
+      "sender_name": "Northbank",
+      "sender_email": "statements@northbank.example",
+      "subject": "Your statement is ready — 01 Feb 2026",
+      "date": "Sun, 01 Feb 2026 06:00:00 +0000",
+      "note": "",
+      "attachments": [
+        {
+          "declared_filename": "statement-2026-01.pdf",
+          "content_type": "application/pdf",
+          "size": 773,
+          "sha256": "2709ec24237b1d69fa431cdd67b0184691e9be06a67b02cd8fdfb427f4143d52",
+          "decodable": true
+        }
+      ]
+    },
+    {
+      "file": "014-statement-1.eml",
+      "sender_name": "Northbank",
+      "sender_email": "statements@northbank.example",
+      "subject": "Your statement is ready — 02 Feb 2026",
+      "date": "Sun, 02 Feb 2026 06:00:00 +0000",
+      "note": "",
+      "attachments": [
+        {
+          "declared_filename": "statement-2026-02.pdf",
+          "content_type": "application/pdf",
+          "size": 773,
+          "sha256": "d2063c790efd9a1b6031730094c3c5bf8c4e203e246d66117713a6bb77cdf57f",
+          "decodable": true
+        }
+      ]
+    },
+    {
+      "file": "015-bank-invoice.eml",
+      "sender_name": "Northbank",
+      "sender_email": "statements@northbank.example",
+      "subject": "Invoice 4471 — account fees",
+      "date": "Thu, 12 Feb 2026 11:05:00 +0000",
+      "note": "rule ordering: matches both `invoices` and `bank-statements`; invoices is first",
+      "attachments": [
+        {
+          "declared_filename": "invoice-4471.pdf",
+          "content_type": "application/pdf",
+          "size": 659,
+          "sha256": "ba273a78a24036f494f2c8eac75b8fb61f85fd6fc8fc9fdc58f7ab3a98721abc",
+          "decodable": true
+        }
+      ]
+    },
+    {
+      "file": "016-site-photo-0.eml",
+      "sender_name": "Sunfield Installations",
+      "sender_email": "crew@sunfield-installations.example",
+      "subject": "Site photos — job 4400",
+      "date": "Fri, 13 Mar 2026 16:40:00 +0000",
+      "note": "two attachments on one message; filed by extension under the sender",
+      "attachments": [
+        {
+          "declared_filename": "job-4400-front.png",
+          "content_type": "image/png",
+          "size": 162,
+          "sha256": "e59f4d2aadd870a29360c5e28be8dff9b2ccb906ad10445e8329132aa49a9237",
+          "decodable": true
+        },
+        {
+          "declared_filename": "job-4400-rear.png",
+          "content_type": "image/png",
+          "size": 162,
+          "sha256": "e59f4d2aadd870a29360c5e28be8dff9b2ccb906ad10445e8329132aa49a9237",
+          "decodable": true
+        }
+      ]
+    },
+    {
+      "file": "017-site-photo-1.eml",
+      "sender_name": "Sunfield Installations",
+      "sender_email": "crew@sunfield-installations.example",
+      "subject": "Site photos — job 4401",
+      "date": "Fri, 14 Mar 2026 16:41:00 +0000",
+      "note": "two attachments on one message; filed by extension under the sender",
+      "attachments": [
+        {
+          "declared_filename": "job-4401-front.png",
+          "content_type": "image/png",
+          "size": 162,
+          "sha256": "649527f0a9168dc749a7ead00739d7570d10049e02776f2bcaf0cae796677633",
+          "decodable": true
+        },
+        {
+          "declared_filename": "job-4401-rear.png",
+          "content_type": "image/png",
+          "size": 162,
+          "sha256": "649527f0a9168dc749a7ead00739d7570d10049e02776f2bcaf0cae796677633",
+          "decodable": true
+        }
+      ]
+    },
+    {
+      "file": "018-site-photo-2.eml",
+      "sender_name": "Sunfield Installations",
+      "sender_email": "crew@sunfield-installations.example",
+      "subject": "Site photos — job 4402",
+      "date": "Fri, 15 Mar 2026 16:42:00 +0000",
+      "note": "two attachments on one message; filed by extension under the sender",
+      "attachments": [
+        {
+          "declared_filename": "job-4402-front.png",
+          "content_type": "image/png",
+          "size": 162,
+          "sha256": "bd353703ea2ab24d61336b29426a5a13f1268eae0fb46395a0c937ac71532493",
+          "decodable": true
+        },
+        {
+          "declared_filename": "job-4402-rear.png",
+          "content_type": "image/png",
+          "size": 162,
+          "sha256": "bd353703ea2ab24d61336b29426a5a13f1268eae0fb46395a0c937ac71532493",
+          "decodable": true
+        }
+      ]
+    },
+    {
+      "file": "019-site-photo-3.eml",
+      "sender_name": "Sunfield Installations",
+      "sender_email": "crew@sunfield-installations.example",
+      "subject": "Site photos — job 4403",
+      "date": "Fri, 16 Mar 2026 16:43:00 +0000",
+      "note": "two attachments on one message; filed by extension under the sender",
+      "attachments": [
+        {
+          "declared_filename": "job-4403-front.png",
+          "content_type": "image/png",
+          "size": 162,
+          "sha256": "9d86b8b4710de13440d1e3db8f8c9d887f94b4cec28c35ea6577eaddbfd869a2",
+          "decodable": true
+        },
+        {
+          "declared_filename": "job-4403-rear.png",
+          "content_type": "image/png",
+          "size": 162,
+          "sha256": "9d86b8b4710de13440d1e3db8f8c9d887f94b4cec28c35ea6577eaddbfd869a2",
+          "decodable": true
+        }
+      ]
+    },
+    {
+      "file": "020-contract.eml",
+      "sender_name": "Jo Parkin",
+      "sender_email": "jo.parkin@bellweather-signs.example",
+      "subject": "As discussed",
+      "date": "Tue, 24 Mar 2026 13:20:00 +0000",
+      "note": "matched on the attachment filename, not the subject",
+      "attachments": [
+        {
+          "declared_filename": "Bellweather-NDA-signed.pdf",
+          "content_type": "application/pdf",
+          "size": 724,
+          "sha256": "90440cf7879665cf542f0ed44fb1aa1107164616d38b700f9d329adccf869fc9",
+          "decodable": true
+        }
+      ]
+    },
+    {
+      "file": "021-supplier-misc.eml",
+      "sender_name": "Northgate Supplies",
+      "sender_email": "accounts@northgate-supplies.example",
+      "subject": "Updated price list",
+      "date": "Mon, 30 Mar 2026 10:00:00 +0000",
+      "note": "falls through to the last rule, filed under the sender's domain",
+      "attachments": [
+        {
+          "declared_filename": "price-list-april.xlsx",
+          "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "size": 138,
+          "sha256": "b41c1d2e8b04775662dd986aa2ad6db5a65a4ff8e3f554bab2372128615dad45",
+          "decodable": true
+        }
+      ]
+    },
+    {
+      "file": "022-umlaut.eml",
+      "sender_name": "Jürgen Falk",
+      "sender_email": "j.falk@harborline-logistics.example",
+      "subject": "Invoice 9931 — Rechnung März",
+      "date": "Wed, 18 Mar 2026 08:15:00 +0000",
+      "note": "non-ASCII sender name, subject and filename",
+      "attachments": [
+        {
+          "declared_filename": "Rechnung-März-9931.pdf",
+          "content_type": "application/pdf",
+          "size": 667,
+          "sha256": "88ff1479b4f7a63bf6c76863772267ae1a4aece957fa826bd25c6d6af60c66de",
+          "decodable": true
+        }
+      ]
+    },
+    {
+      "file": "023-collision-0.eml",
+      "sender_name": "Harborline Logistics",
+      "sender_email": "billing@harborline-logistics.example",
+      "subject": "Invoice — March haulage",
+      "date": "Wed, 25 Mar 2026 09:00:00 +0000",
+      "note": "collision: identical destination name, different contents",
+      "attachments": [
+        {
+          "declared_filename": "invoice.pdf",
+          "content_type": "application/pdf",
+          "size": 710,
+          "sha256": "8b21470c703c04a4eca73b71c12710abff05e5d8f8f29a5d11ef79c3a499f15f",
+          "decodable": true
+        }
+      ]
+    },
+    {
+      "file": "024-collision-1.eml",
+      "sender_name": "Harborline Logistics",
+      "sender_email": "billing@harborline-logistics.example",
+      "subject": "Invoice — March haulage",
+      "date": "Wed, 25 Mar 2026 09:00:00 +0000",
+      "note": "collision: identical destination name, different contents",
+      "attachments": [
+        {
+          "declared_filename": "invoice.pdf",
+          "content_type": "application/pdf",
+          "size": 712,
+          "sha256": "ef74635173d7b924e2109dd3d8ac84fe9e51286fbf96b0d48712208f74ef47e7",
+          "decodable": true
+        }
+      ]
+    },
+    {
+      "file": "025-no-filename.eml",
+      "sender_name": "Quayside Print",
+      "sender_email": "hello@quayside-print.example",
+      "subject": "Invoice 2210 — proof copy",
+      "date": "Thu, 26 Mar 2026 15:00:00 +0000",
+      "note": "unparseable name: the part declares no filename at all",
+      "attachments": [
+        {
+          "declared_filename": null,
+          "content_type": "application/pdf",
+          "size": 657,
+          "sha256": "b1f75d4ad4532ece4ea17de748f4530382961da21e9589823338ab0043398da2",
+          "decodable": true
+        }
+      ]
+    },
+    {
+      "file": "026-punctuation-filename.eml",
+      "sender_name": "Quayside Print",
+      "sender_email": "hello@quayside-print.example",
+      "subject": "Invoice 2211",
+      "date": "Thu, 26 Mar 2026 15:30:00 +0000",
+      "note": "unparseable name: nothing in it survives slugifying",
+      "attachments": [
+        {
+          "declared_filename": "….pdf",
+          "content_type": "application/pdf",
+          "size": 662,
+          "sha256": "22e1095454a2703aff18dad0609ae378aa41eeaa022e7aa33916cee509c83973",
+          "decodable": true
+        }
+      ]
+    },
+    {
+      "file": "027-traversal-filename.eml",
+      "sender_name": "Harborline Logistics",
+      "sender_email": "billing@harborline-logistics.example",
+      "subject": "Invoice 7788 — notes",
+      "date": "Fri, 27 Mar 2026 09:45:00 +0000",
+      "note": "a filename carrying a path; only the last component is used",
+      "attachments": [
+        {
+          "declared_filename": "../../../etc/passwd-notes.txt",
+          "content_type": "text/plain",
+          "size": 36,
+          "sha256": "6777c79a33840b8812df6e09ef5216f3d9c0f4b18471d13d3c44479caaadfb9f",
+          "decodable": true
+        }
+      ]
+    },
+    {
+      "file": "028-no-attachment.eml",
+      "sender_name": "Jo Parkin",
+      "sender_email": "jo.parkin@bellweather-signs.example",
+      "subject": "Re: the March schedule",
+      "date": "Tue, 31 Mar 2026 12:00:00 +0000",
+      "note": "no attachment: gets an index row and nothing else",
+      "attachments": []
+    },
+    {
+      "file": "029-no-date.eml",
+      "sender_name": "Quayside Print",
+      "sender_email": "hello@quayside-print.example",
+      "subject": "Invoice 2212",
+      "date": null,
+      "note": "no Date header: there is no year/month to file under, so unsorted",
+      "attachments": [
+        {
+          "declared_filename": "invoice-2212.pdf",
+          "content_type": "application/pdf",
+          "size": 659,
+          "sha256": "1be6b0b13c31e308666ce8ac38a616437d1511d88e675c9a12d1f49c3a71f09b",
+          "decodable": true
+        }
+      ]
+    },
+    {
+      "file": "030-bad-date.eml",
+      "sender_name": "Meadowlark Utilities",
+      "sender_email": "noreply@meadowlark-utilities.example",
+      "subject": "Receipt — account 8841",
+      "date": "Sometime last Tuesday",
+      "note": "unparseable Date header: same treatment as a missing one",
+      "attachments": [
+        {
+          "declared_filename": "receipt-8841.pdf",
+          "content_type": "application/pdf",
+          "size": 659,
+          "sha256": "7fff20422240084b88c0698f3b4ed0b9b0420aa9019f6e75da5134b159e6513a",
+          "decodable": true
+        }
+      ]
+    },
+    {
+      "file": "031-broken-charset.eml",
+      "sender_name": "Jo Parkin",
+      "sender_email": "jo.parkin@bellweather-signs.example",
+      "subject": "Invoice 3120 — meeting notes",
+      "date": "Wed, 01 Apr 2026 09:00:00 +0000",
+      "note": "the attachment declares a charset that does not exist, so it will not decode",
+      "attachments": [
+        {
+          "declared_filename": "meeting-notes.txt",
+          "content_type": "text/plain",
+          "size": 17,
+          "sha256": "4d9e0378557106c694682bdc2ddaffc1b5ac7d581c526e84b4b05901f6f7cd82",
+          "decodable": false
+        }
+      ]
+    },
+    {
+      "file": "032-unmatched-0.eml",
+      "sender_name": "Jo Parkin",
+      "sender_email": "jo.parkin@bellweather-signs.example",
+      "subject": "Lunch on Thursday?",
+      "date": "Thu, 02 Apr 2026 11:00:00 +0000",
+      "note": "no rule matches: goes to unsorted with the reason",
+      "attachments": [
+        {
+          "declared_filename": "menu.csv",
+          "content_type": "text/csv",
+          "size": 23,
+          "sha256": "c0de5961acd3d88d8c35a2aa900cc957031f86856b6f2d7958369c1bf5d64d8d",
+          "decodable": true
+        }
+      ]
+    },
+    {
+      "file": "033-unmatched-1.eml",
+      "sender_name": "Jo Parkin",
+      "sender_email": "jo.parkin@bellweather-signs.example",
+      "subject": "Fwd: newsletter",
+      "date": "Thu, 03 Apr 2026 11:00:00 +0000",
+      "note": "no rule matches: goes to unsorted with the reason",
+      "attachments": [
+        {
+          "declared_filename": "spring-newsletter.docx",
+          "content_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "size": 138,
+          "sha256": "2a7eceff7113ad11ee98a632833f8df4cfc43dc9a56ce3a684c2104ab19662c8",
+          "decodable": true
+        }
+      ]
+    }
+  ]
+}

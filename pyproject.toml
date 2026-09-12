@@ -1,0 +1,26 @@
+[project]
+name = "inbox-filer"
+version = "0.1.0"
+description = "File every attachment in a mailbox into named folders, and write an index sheet."
+requires-python = ">=3.12"
+dependencies = [
+    # Writes the .xlsx the client actually double-clicks. Pure Python, no
+    # C toolchain. The CSV alongside it needs nothing at all, so a machine
+    # that cannot install this still gets a usable index.
+    "openpyxl==3.1.5",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest==8.3.3",
+]
+
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["inbox_filer"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

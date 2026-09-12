@@ -1,0 +1,34 @@
+From: Northbank <statements@northbank.example>
+To: office@rookery-demo.example
+Subject: Invoice 4471 =?utf-8?b?4oCU?= account fees
+Date: Thu, 12 Feb 2026 11:05:00 +0000
+Message-ID: <fixture-015@rookery-demo.example>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="=-fixture-015-="
+
+--=-fixture-015-=
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Fee invoice attached.
+
+--=-fixture-015-=
+Content-Type: application/pdf
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="invoice-4471.pdf"
+MIME-Version: 1.0
+
+JVBERi0xLjQKMSAwIG9iago8PCAvVHlwZSAvQ2F0YWxvZyAvUGFnZXMgMiAwIFIgPj4KZW5kb2Jq
+CjIgMCBvYmoKPDwgL1R5cGUgL1BhZ2VzIC9LaWRzIFszIDAgUl0gL0NvdW50IDEgPj4KZW5kb2Jq
+CjMgMCBvYmoKPDwgL1R5cGUgL1BhZ2UgL1BhcmVudCAyIDAgUiAvTWVkaWFCb3ggWzAgMCA1OTUg
+ODQyXSAvUmVzb3VyY2VzIDw8IC9Gb250IDw8IC9GMSA1IDAgUiA+PiA+PiAvQ29udGVudHMgNCAw
+IFIgPj4KZW5kb2JqCjQgMCBvYmoKPDwgL0xlbmd0aCAxMTQgPj4Kc3RyZWFtCkJUIC9GMSAxMSBU
+ZiA1NiA3MjAgVGQgKElOVk9JQ0UgNDQ3MSkgVGogRVQKQlQgL0YxIDExIFRmIDU2IDcwMiBUZCAo
+KSBUaiBFVApCVCAvRjEgMTEgVGYgNTYgNjg0IFRkIChTYW1wbGUpIFRqIEVUCgplbmRzdHJlYW0K
+ZW5kb2JqCjUgMCBvYmoKPDwgL1R5cGUgL0ZvbnQgL1N1YnR5cGUgL1R5cGUxIC9CYXNlRm9udCAv
+SGVsdmV0aWNhID4+CmVuZG9iagp4cmVmCjAgNgowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAwMDAw
+MDkgMDAwMDAgbiAKMDAwMDAwMDA1OCAwMDAwMCBuIAowMDAwMDAwMTE1IDAwMDAwIG4gCjAwMDAw
+MDAyNDEgMDAwMDAgbiAKMDAwMDAwMDQwNiAwMDAwMCBuIAp0cmFpbGVyCjw8IC9TaXplIDYgL1Jv
+b3QgMSAwIFIgPj4Kc3RhcnR4cmVmCjQ3NgolJUVPRgo=
+
+--=-fixture-015-=--

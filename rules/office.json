@@ -1,0 +1,47 @@
+{
+  "name": "office filing",
+  "description": "Read top to bottom. The first rule whose conditions all hold is the one that files the attachment; nothing below it is consulted. An attachment that matches no rule goes to unsorted/ with the reason recorded, because a wrong folder is harder to find than an unsorted one.",
+
+  "path_template": "{year}/{month}/{folder}/{filename}",
+  "filename_template": "{date}-{slug}{ext}",
+  "unsorted_folder": "unsorted",
+
+  "rules": [
+    {
+      "name": "invoices",
+      "description": "Anything calling itself an invoice, whoever it is from. First in the list on purpose: an invoice from the bank is still an invoice, and this rule is above the bank rule that would otherwise claim it.",
+      "folder": "invoices",
+      "when": { "subject_matches": "(?i)\\b(invoice|inv)\\b" }
+    },
+    {
+      "name": "receipts",
+      "description": "Payment confirmations. Kept separate from invoices because they are filed for different reasons.",
+      "folder": "receipts",
+      "when": { "subject_matches": "(?i)\\b(receipt|payment received|paid in full)\\b" }
+    },
+    {
+      "name": "bank-statements",
+      "description": "Everything else from the bank. Sender-based, because statement subjects are not worth matching on.",
+      "folder": "bank-statements",
+      "when": { "sender_domain": "northbank.example" }
+    },
+    {
+      "name": "contracts",
+      "description": "Matched on the attachment's own filename rather than the subject, because the covering email usually says nothing useful.",
+      "folder": "contracts",
+      "when": { "filename_matches": "(?i)(contract|agreement|nda)" }
+    },
+    {
+      "name": "site-photos",
+      "description": "Job photos, filed under the crew that sent them. `{sender_local}` is the part of the address before the @, so photos from crew@sunfield-installations.example land in photos/crew.",
+      "folder": "photos/{sender_local}",
+      "when": { "extension_is": [".jpg", ".jpeg", ".png"] }
+    },
+    {
+      "name": "supplier-paperwork",
+      "description": "The catch-for-one-sender rule: anything else from a supplier we deal with often, filed under their domain. Note this is last, so their invoices still go to invoices/.",
+      "folder": "suppliers/{sender_domain}",
+      "when": { "sender_domain": "northgate-supplies.example" }
+    }
+  ]
+}

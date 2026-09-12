@@ -1,0 +1,25 @@
+From: Jo Parkin <jo.parkin@bellweather-signs.example>
+To: office@rookery-demo.example
+Subject: Fwd: newsletter
+Date: Fri, 03 Apr 2026 11:00:00 +0000
+Message-ID: <fixture-033@rookery-demo.example>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="=-fixture-033-="
+
+--=-fixture-033-=
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+See attached.
+
+--=-fixture-033-=
+Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="spring-newsletter.docx"
+MIME-Version: 1.0
+
+UEsDBBQAAAAAAAAAIQAoW3glFAAAABQAAAAKAAAAc2FtcGxlLnR4dHN5bnRoZXRpYyBuZXdzbGV0
+dGVyUEsBAhQDFAAAAAAAAAAhAChbeCUUAAAAFAAAAAoAAAAAAAAAAAAAAIABAAAAAHNhbXBsZS50
+eHRQSwUGAAAAAAEAAQA4AAAAPAAAAAAA
+
+--=-fixture-033-=--

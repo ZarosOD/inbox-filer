@@ -1,0 +1,35 @@
+From: Sunfield Installations <crew@sunfield-installations.example>
+To: office@rookery-demo.example
+Subject: Site photos =?utf-8?b?4oCU?= job 4403
+Date: Mon, 16 Mar 2026 16:43:00 +0000
+Message-ID: <fixture-019@rookery-demo.example>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="=-fixture-019-="
+
+--=-fixture-019-=
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Photos from today.
+
+--=-fixture-019-=
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="job-4403-front.png"
+MIME-Version: 1.0
+
+iVBORw0KGgoAAAANSUhEUgAAAGAAAABACAIAAABqVuVZAAAAaUlEQVR42u3QMQ0AAAgDsJnEECLQ
+iwNujiZV0PQUhygQJEiQIEGCBAlCkCBBggQJEiQIQYIECRIkSJAgBAkSJEiQIEGCBCFIkCBBggQJ
+EoQgQYIECRIkSBCCBAkSJEiQIEGCECRIkKB/FvL9Of8dh91sAAAAAElFTkSuQmCC
+
+--=-fixture-019-=
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="job-4403-rear.png"
+MIME-Version: 1.0
+
+iVBORw0KGgoAAAANSUhEUgAAAGAAAABACAIAAABqVuVZAAAAaUlEQVR42u3QMQ0AAAgDsJnEECLQ
+iwNujiZV0PQUhygQJEiQIEGCBAlCkCBBggQJEiQIQYIECRIkSJAgBAkSJEiQIEGCBCFIkCBBggQJ
+EoQgQYIECRIkSBCCBAkSJEiQIEGCECRIkKB/FvL9Of8dh91sAAAAAElFTkSuQmCC
+
+--=-fixture-019-=--

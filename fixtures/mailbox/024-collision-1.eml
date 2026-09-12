@@ -1,0 +1,35 @@
+From: Harborline Logistics <billing@harborline-logistics.example>
+To: office@rookery-demo.example
+Subject: Invoice =?utf-8?b?4oCU?= March haulage
+Date: Wed, 25 Mar 2026 09:00:00 +0000
+Message-ID: <fixture-024@rookery-demo.example>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="=-fixture-024-="
+
+--=-fixture-024-=
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Invoice attached.
+
+--=-fixture-024-=
+Content-Type: application/pdf
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="invoice.pdf"
+MIME-Version: 1.0
+
+JVBERi0xLjQKMSAwIG9iago8PCAvVHlwZSAvQ2F0YWxvZyAvUGFnZXMgMiAwIFIgPj4KZW5kb2Jq
+CjIgMCBvYmoKPDwgL1R5cGUgL1BhZ2VzIC9LaWRzIFszIDAgUl0gL0NvdW50IDEgPj4KZW5kb2Jq
+CjMgMCBvYmoKPDwgL1R5cGUgL1BhZ2UgL1BhcmVudCAyIDAgUiAvTWVkaWFCb3ggWzAgMCA1OTUg
+ODQyXSAvUmVzb3VyY2VzIDw8IC9Gb250IDw8IC9GMSA1IDAgUiA+PiA+PiAvQ29udGVudHMgNCAw
+IFIgPj4KZW5kb2JqCjQgMCBvYmoKPDwgL0xlbmd0aCAxNjcgPj4Kc3RyZWFtCkJUIC9GMSAxMSBU
+ZiA1NiA3MjAgVGQgKElOVk9JQ0UpIFRqIEVUCkJUIC9GMSAxMSBUZiA1NiA3MDIgVGQgKCkgVGog
+RVQKQlQgL0YxIDExIFRmIDU2IDY4NCBUZCAoQW1vdW50IGR1ZTogozEsOTgwLjAwKSBUaiBFVApC
+VCAvRjEgMTEgVGYgNTYgNjY2IFRkIChTYW1wbGUgZGF0YSkgVGogRVQKCmVuZHN0cmVhbQplbmRv
+YmoKNSAwIG9iago8PCAvVHlwZSAvRm9udCAvU3VidHlwZSAvVHlwZTEgL0Jhc2VGb250IC9IZWx2
+ZXRpY2EgPj4KZW5kb2JqCnhyZWYKMCA2CjAwMDAwMDAwMDAgNjU1MzUgZiAKMDAwMDAwMDAwOSAw
+MDAwMCBuIAowMDAwMDAwMDU4IDAwMDAwIG4gCjAwMDAwMDAxMTUgMDAwMDAgbiAKMDAwMDAwMDI0
+MSAwMDAwMCBuIAowMDAwMDAwNDU5IDAwMDAwIG4gCnRyYWlsZXIKPDwgL1NpemUgNiAvUm9vdCAx
+IDAgUiA+PgpzdGFydHhyZWYKNTI5CiUlRU9GCg==
+
+--=-fixture-024-=--
