@@ -478,7 +478,8 @@ install, and `make` exits non-zero having written nothing.
 make demo
 ```
 
-Rebuilds `demo/out/demo.gif` headless from nothing — fetching uv, vhs, ttyd and
+Rebuilds `demo/out/demo.gif` and `demo/out/demo.mp4` — two encodes of one
+capture — headless from nothing, fetching uv, vhs, ttyd and
 ffmpeg into `demo/.toolchain/` — in about 90 seconds on a machine with none of
 them. The clip is 31 s against a 35 s budget that `record.sh` enforces by
 measuring the result, so a tape that grows fails the build instead of quietly
