@@ -454,6 +454,13 @@ had just written — two commands printed on adjacent lines in that README. Here
 only `demo/record.sh` may ask for the wipe, with an explicit `--fresh`, and the
 test asserts that it still does.
 
+`tests/test_readme_clip.py` reads the clip-length sentence further down this
+file back off the committed `demo/out/demo.gif` and `demo/out/demo.mp4`. It
+parses the numbers out of README.md rather than restating them, so a re-record
+that moves the clip and leaves the prose behind fails there. Its duration
+readers are stdlib, because a dead clone has no `ffprobe`, and they are pinned
+against hand-built mp4 and gif headers.
+
 Verified on a clean machine, meaning `env -i` with an empty `HOME` and a PATH
 holding no `uv`:
 
@@ -484,9 +491,14 @@ and ffmpeg into `demo/.toolchain/`. Measured on this machine: **22 seconds** to
 re-record once that toolchain is there (21.8, 21.8, 22.0 over three runs); the
 first run adds the Chromium download on top, which I have not timed — it lands
 as 549 MB of the 760 MB toolchain, but the download wall clock is not a number
-I can give you. The clip is 18 s against a 35 s budget that `record.sh`
-enforces by reading the encoded file, so the guard is real rather than a note
-about not shipping a two-minute GIF.
+I can give you.
+
+The clip is 18 s against a 35 s budget that `record.sh` enforces by reading the
+encoded file, so the guard is real rather than a note about not shipping a
+two-minute GIF. That sentence is itself checked:
+`tests/test_readme_clip.py` parses the two numbers out of this file and reads
+the duration back off the committed `demo/out/demo.gif` and `demo/out/demo.mp4`,
+so a re-record that moves the clip and leaves the README behind fails the suite.
 
 **The clip ends on the real file.** The scene runs `file_mail.py`, then opens
 `filed/index.xlsx` — the sheet that run just wrote — and reads it off disk. It
