@@ -440,7 +440,10 @@ Exit codes:
 make test
 ```
 
-245 tests, 9.7 seconds, no network. They cover the mailbox reader against the
+272 tests, 12.5 seconds, no network. Two of them skip in a dead clone — the
+`ffprobe` cross-check in `tests/test_readme_clip.py`, which needs a toolchain
+`make demo` downloads. They are the suite's only skips and they are a
+cross-check, not a guard. They cover the mailbox reader against the
 generated ground truth, the rule loader's refusals one by one, collisions and
 idempotency at the planner level, and the four acceptance behaviours end to end
 (`tests/test_cli.py`): the dry run changing not one byte, the second run being a
@@ -466,8 +469,8 @@ holding no `uv`:
 
 | | |
 |---|---|
-| dead clone → filed output (`make run`) | 6.1 s (5.9, 6.1, 6.2 over three clones) |
-| dead clone → `make test` (245 tests) | 16.5 s, of which 10.3 s is the suite |
+| dead clone → filed output (`make run`) | 6.2 s median (5.9, 6.1, 6.2, 6.6, 7.1 over five clones) |
+| dead clone → `make test` (272 tests) | 19.1 s, of which 12.6 s is the suite |
 | `make plan` / `make run`, venv warm | 0.4 s / 0.5 s |
 | second `make run` | 0.5 s, tree byte-identical |
 | `make demo`, toolchain warm | 22 s (21.8, 21.8, 22.0 over three runs) |
@@ -549,7 +552,7 @@ inbox_filer/
   cli.py                  arguments and exit codes
 rules/office.json         the rules, meant to be read
 fixtures/                 the synthetic mailbox and the script that writes it
-tests/                    245 tests
+tests/                    272 tests
 demo/                     recording scaffolding, shared across pieces
 ```
 
