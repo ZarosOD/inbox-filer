@@ -3,6 +3,8 @@
 from __future__ import annotations
 
 import csv
+import io
+import re
 import zipfile
 from pathlib import Path
 
@@ -91,14 +93,71 @@ def test_the_csv_is_identical_when_written_twice(plan, tmp_path):
     assert (tmp_path / "one.csv").read_bytes() == (tmp_path / "two.csv").read_bytes()
 
 
+def with_a_moved_clock(data: bytes) -> bytes:
+    """The same workbook as a machine whose clock reads differently wrote it.
+
+    Both clocks move: the zip member stamps and the Office document's own
+    `dcterms` timestamps. This exists because writing the file twice inside one
+    test proves nothing — both saves land in the same second, so the check
+    passes whether or not anything was flattened. Moving the clock by hand is
+    what makes the assertion load-bearing.
+    """
+    source = zipfile.ZipFile(io.BytesIO(data))
+    out = io.BytesIO()
+    with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED) as target:
+        for item in source.infolist():
+            body = source.read(item.filename)
+            if item.filename == "docProps/core.xml":
+                body = index._TIMESTAMP.sub(rb"\g<1>2031-07-04T11:22:33Z\g<2>", body)
+            info = zipfile.ZipInfo(item.filename, date_time=(2031, 7, 4, 11, 22, 32))
+            info.compress_type = item.compress_type
+            info.external_attr = item.external_attr
+            info.create_system = 0
+            target.writestr(info, body)
+    return out.getvalue()
+
+
+def test_a_run_on_a_different_clock_produces_the_same_xlsx_bytes(plan, tmp_path):
+    """The test that keeps `index._repack` honest.
+
+    Not free: openpyxl stamps the save time into docProps/core.xml and the zip
+    stamps it into every member. Writing the file twice in a row cannot show
+    that — both saves land in the same second, so the bytes match with or
+    without the flattening. Moving the clock by hand is the assertion that
+    goes red when `_repack` stops being called."""
+    path = tmp_path / "one.xlsx"
+    index.write_xlsx(path, plan)
+    written = path.read_bytes()
+
+    assert index._repack(with_a_moved_clock(written)) == written
+
+
 def test_the_xlsx_is_identical_when_written_twice(plan, tmp_path):
-    """Not free: openpyxl stamps the save time into docProps/core.xml and the
-    zip stamps it into every member. Both are flattened by index._repack, and
-    this is the test that keeps them flattened."""
+    """The weaker sibling of the test above, kept for what it does cover: two
+    writes of one plan produce one file, clock aside."""
     index.write_xlsx(tmp_path / "one.xlsx", plan)
     index.write_xlsx(tmp_path / "two.xlsx", plan)
 
     assert (tmp_path / "one.xlsx").read_bytes() == (tmp_path / "two.xlsx").read_bytes()
+
+
+def test_the_document_clock_is_flattened_not_just_the_zip(plan, tmp_path):
+    """Two clocks, two fixes. Rewriting only the zip member timestamps would
+    leave docProps/core.xml differing every run, and the file would still fail
+    `cmp` while looking like it had been handled. Both are checked by name:
+    openpyxl refreshes `modified` at save time whatever the properties said,
+    so an epoch found *somewhere* in core.xml is not enough."""
+    path = tmp_path / "index.xlsx"
+    index.write_xlsx(path, plan)
+
+    with zipfile.ZipFile(path) as book:
+        core = book.read("docProps/core.xml").decode("utf-8")
+        stamps = dict(re.findall(r"<dcterms:(created|modified)[^>]*>([^<]*)<", core))
+        assert stamps == {
+            "created": "1980-01-01T00:00:00Z",
+            "modified": "1980-01-01T00:00:00Z",
+        }
+        assert all(item.date_time == (1980, 1, 1, 0, 0, 0) for item in book.infolist())
 
 
 def test_the_xlsx_is_identical_after_the_files_have_been_written(plan, tmp_path):
