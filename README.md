@@ -463,8 +463,8 @@ holding no `uv`:
 | dead clone → `make test` (245 tests) | 16.5 s, of which 10.3 s is the suite |
 | `make plan` / `make run`, venv warm | 0.4 s / 0.5 s |
 | second `make run` | 0.5 s, tree byte-identical |
-| `make demo`, toolchain warm | 25 s |
-| `.venv` / demo toolchain | 6.8 MB / 784 MB |
+| `make demo`, toolchain warm | 22 s (21.8, 21.8, 22.0 over three runs) |
+| `.venv` / demo toolchain | 6.8 MB / 760 MB |
 
 The failure path is driven deliberately too: with a `curl` shimmed to exit 7 and
 no `ensurepip`, `setup.sh` retries, reports the real exit code, prints what to
@@ -480,9 +480,11 @@ make demo
 
 Rebuilds `demo/out/demo.gif` and `demo/out/demo.mp4` — two encodes of one
 capture — headless from nothing, fetching uv, Playwright, a headless Chromium
-and ffmpeg into `demo/.toolchain/`. Measured on this machine: **25 seconds** to
-re-record once that toolchain is there; the first run adds a ~170 MB browser
-download on top. The clip is 21 s against a 35 s budget that `record.sh`
+and ffmpeg into `demo/.toolchain/`. Measured on this machine: **22 seconds** to
+re-record once that toolchain is there (21.8, 21.8, 22.0 over three runs); the
+first run adds the Chromium download on top, which I have not timed — it lands
+as 549 MB of the 760 MB toolchain, but the download wall clock is not a number
+I can give you. The clip is 18 s against a 35 s budget that `record.sh`
 enforces by reading the encoded file, so the guard is real rather than a note
 about not shipping a two-minute GIF.
 
