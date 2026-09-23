@@ -440,7 +440,7 @@ Exit codes:
 make test
 ```
 
-272 tests, 12.5 seconds, no network. Two of them skip in a dead clone — the
+303 tests, 12.5 seconds, no network. Two of them skip in a dead clone — the
 `ffprobe` cross-check in `tests/test_readme_clip.py`, which needs a toolchain
 `make demo` downloads. They are the suite's only skips and they are a
 cross-check, not a guard. They cover the mailbox reader against the
@@ -464,13 +464,20 @@ that moves the clip and leaves the prose behind fails there. Its duration
 readers are stdlib, because a dead clone has no `ffprobe`, and they are pinned
 against hand-built mp4 and gif headers.
 
+`tests/test_readme_counts.py` does the same to the test counts in this file —
+all three copies of the total, and the skip figure, which it takes off the
+ffprobe cross-check's own parametrised count rather than from a number typed
+twice. It is here because that total had gone stale twice in two weeks, both
+times in a commit that added tests: the number nobody can see is the number
+nobody updates.
+
 Verified on a clean machine, meaning `env -i` with an empty `HOME` and a PATH
 holding no `uv`:
 
 | | |
 |---|---|
 | dead clone → filed output (`make run`) | 6.2 s median (5.9, 6.1, 6.2, 6.6, 7.1 over five clones) |
-| dead clone → `make test` (272 tests) | 19.1 s, of which 12.6 s is the suite |
+| dead clone → `make test` (303 tests) | 19.1 s, of which 12.6 s is the suite |
 | `make plan` / `make run`, venv warm | 0.4 s / 0.5 s |
 | second `make run` | 0.5 s, tree byte-identical |
 | `make demo`, toolchain warm | 22 s (21.8, 21.8, 22.0 over three runs) |
@@ -479,6 +486,23 @@ holding no `uv`:
 The failure path is driven deliberately too: with a `curl` shimmed to exit 7 and
 no `ensurepip`, `setup.sh` retries, reports the real exit code, prints what to
 install, and `make` exits non-zero having written nothing.
+
+### Re-measuring that table
+
+```bash
+make timings          # measure it, and diff it against this file
+make timings ARGS="--list"
+```
+
+Every figure in the table above is a wall clock or a disk size on one machine,
+which is why none of them is asserted by the suite: doing that would buy a
+flaky suite rather than a guard. They get `tools/timings.py` instead — run by
+hand before a push, never in CI. It re-measures each row (fresh clones under
+`env -i` for the dead-clone ones, the toolchain-warm re-record into a scratch
+directory so the committed clip cannot move), prints the line of this README
+that states it, and says whether the two still agree. It exits non-zero when
+they do not, so `make` reports `Error 1`; that is the verdict arriving, not a
+crash.
 
 ---
 
@@ -552,7 +576,7 @@ inbox_filer/
   cli.py                  arguments and exit codes
 rules/office.json         the rules, meant to be read
 fixtures/                 the synthetic mailbox and the script that writes it
-tests/                    272 tests
+tests/                    303 tests
 demo/                     recording scaffolding, shared across pieces
 ```
 
