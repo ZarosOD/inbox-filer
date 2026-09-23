@@ -440,7 +440,7 @@ Exit codes:
 make test
 ```
 
-185 tests, 8.6 seconds, no network. They cover the mailbox reader against the
+245 tests, 9.7 seconds, no network. They cover the mailbox reader against the
 generated ground truth, the rule loader's refusals one by one, collisions and
 idempotency at the planner level, and the four acceptance behaviours end to end
 (`tests/test_cli.py`): the dry run changing not one byte, the second run being a
@@ -460,11 +460,11 @@ holding no `uv`:
 | | |
 |---|---|
 | dead clone → filed output (`make run`) | 5.9 s |
-| dead clone → `make test` (185 tests) | 14.4 s |
+| dead clone → `make test` (245 tests) | 14.4 s |
 | `make plan` / `make run`, venv warm | 0.4 s / 0.5 s |
 | second `make run` | 0.5 s, tree byte-identical |
-| `make demo` from nothing | 1 m 45 s |
-| `.venv` / demo toolchain | 6.8 MB / 231 MB |
+| `make demo`, toolchain warm | 25 s |
+| `.venv` / demo toolchain | 6.8 MB / 784 MB |
 
 The failure path is driven deliberately too: with a `curl` shimmed to exit 7 and
 no `ensurepip`, `setup.sh` retries, reports the real exit code, prints what to
@@ -479,15 +479,25 @@ make demo
 ```
 
 Rebuilds `demo/out/demo.gif` and `demo/out/demo.mp4` — two encodes of one
-capture — headless from nothing, fetching uv, vhs, ttyd and
-ffmpeg into `demo/.toolchain/` — in under two minutes on a machine with none of
-them. The clip is 31 s against a 35 s budget that `record.sh` enforces by
-measuring the result, so a tape that grows fails the build instead of quietly
-shipping a two-minute GIF.
+capture — headless from nothing, fetching uv, Playwright, a headless Chromium
+and ffmpeg into `demo/.toolchain/`. Measured on this machine: **25 seconds** to
+re-record once that toolchain is there; the first run adds a ~170 MB browser
+download on top. The clip is 21 s against a 35 s budget that `record.sh`
+enforces by reading the encoded file, so the guard is real rather than a note
+about not shipping a two-minute GIF.
+
+**The clip ends on the real file.** The scene runs `file_mail.py`, then opens
+`filed/index.xlsx` — the sheet that run just wrote — and reads it off disk. It
+is not a fixture and not a re-typed table; if the run does not write it, the
+recording fails instead of showing you one.
+
+`make demo-terminal` records the same story as a terminal session into
+`demo/out-terminal/` instead.
 
 `demo/lib/` is shared scaffolding carried across four portfolio pieces and is
-not specific to this one. The files that are: `demo/recipe`, `demo/setup.sh` and
-`demo/demo.tape`.
+not specific to this one — including `lib/sheet.py`, which draws every
+spreadsheet frame in the portfolio. The files that are specific: `demo/recipe`,
+`demo/setup.sh`, `demo/scene.py` and `demo/demo.tape`.
 
 ---
 
@@ -525,7 +535,7 @@ inbox_filer/
   cli.py                  arguments and exit codes
 rules/office.json         the rules, meant to be read
 fixtures/                 the synthetic mailbox and the script that writes it
-tests/                    185 tests
+tests/                    245 tests
 demo/                     recording scaffolding, shared across pieces
 ```
 

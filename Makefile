@@ -1,14 +1,15 @@
 PY := .venv/bin/python
 MAILBOX := fixtures/mailbox
 
-.PHONY: help setup run plan test fixtures demo clean
+.PHONY: help setup run plan test fixtures demo demo-terminal clean
 
 help:
 	@echo "make plan      dry run: print the whole plan, write nothing"
 	@echo "make run       file the bundled fixture mailbox and print the summary"
 	@echo "make test      run the test suite"
 	@echo "make fixtures  regenerate the synthetic mailbox and its ground truth"
-	@echo "make demo      regenerate demo/out/demo.gif with VHS, headless"
+	@echo "make demo      regenerate demo/out/demo.gif with Playwright, headless"
+	@echo "make demo-terminal  the same story recorded with VHS instead"
 	@echo "make clean     remove filed/, the demo toolchain and the caches"
 
 setup:
@@ -32,6 +33,9 @@ fixtures: setup
 demo:
 	@./demo/record.sh
 
+demo-terminal:
+	@DEMO_RECIPE=vhs DEMO_OUT_DIR=demo/out-terminal ./demo/record.sh
+
 clean:
-	rm -rf filed demo/out demo/.toolchain demo/.scratch .pytest_cache
+	rm -rf filed demo/out demo/out-terminal demo/.toolchain demo/.scratch .pytest_cache
 	find . -name __pycache__ -type d -prune -exec rm -rf {} +
