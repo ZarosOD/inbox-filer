@@ -33,10 +33,10 @@ make plan       # the dry run: prints the full plan, writes nothing
 make run        # files the bundled sample mailbox
 ```
 
-From a dead clone to real output is **5.8 seconds**, measured on a machine with
-no `uv`, no `ensurepip` and an empty `HOME`. The first target you run fetches a
-pinned `uv` into `demo/.toolchain/`, which then supplies a Python 3.12 if the
-machine has none. Nothing is installed outside the checkout and nothing needs
+From a dead clone to real output is **about 6 seconds**, measured on a machine
+with no `uv`, no `ensurepip` and an empty `HOME`. The first target you run
+fetches a pinned `uv` into `demo/.toolchain/`, which then supplies a Python 3.12
+if the machine has none. Nothing is installed outside the checkout and nothing needs
 root.
 
 If you would rather drive it yourself:
@@ -459,8 +459,8 @@ holding no `uv`:
 
 | | |
 |---|---|
-| dead clone → filed output (`make run`) | 5.9 s |
-| dead clone → `make test` (245 tests) | 14.4 s |
+| dead clone → filed output (`make run`) | 6.1 s (5.9, 6.1, 6.2 over three clones) |
+| dead clone → `make test` (245 tests) | 16.5 s, of which 10.3 s is the suite |
 | `make plan` / `make run`, venv warm | 0.4 s / 0.5 s |
 | second `make run` | 0.5 s, tree byte-identical |
 | `make demo`, toolchain warm | 25 s |
