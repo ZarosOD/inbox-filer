@@ -19,6 +19,13 @@ file_mail.py did not write it, `read_table` raises and there is no clip.
 
 The mailbox is invented. No real sender, client or message appears here or in
 the recording.
+
+Ahead of beat 1, `demo/lib/card.py` prepends a 0.8 s title card composed from
+two of the frames below — the before artifact on the left, the after one on the
+right. It is not a beat: the scene is unchanged and the card is a prepend plus
+a `demo/out/poster.png` export. The two labels and the two lines of specifics
+under them are the only part of it that belongs to this piece, and they are
+just below.
 """
 
 from __future__ import annotations
@@ -37,7 +44,17 @@ WIDTHS = {"note": 3.4, "new_path": 2.3, "original_filename": 1.2,
           "date": 1.35, "rule": 0.85, "status": 0.65}
 
 
-def record(video_dir: Path) -> Path:
+# The title card's two labels. Its shape, colours and typeface are
+# demo/lib/card.py, which is shared and byte-identical in all four repos; the
+# words are here because what this piece turns its input into is a fact about
+# this piece, not about the pipeline.
+# The line under each label is built from the run's own tables below, so
+# changing the fixture mailbox moves the card the way it moves the clip.
+CARD_BEFORE_LABEL = "An unsorted mailbox"
+CARD_AFTER_LABEL = "Filed, and indexed"
+
+
+def record(video_dir: Path, poster: Path | None = None) -> Path:
     mailbox = REPO / "fixtures" / "mailbox"
 
     # Beat 1 is built before the tool runs, so the BEFORE frame cannot
@@ -59,7 +76,7 @@ def record(video_dir: Path) -> Path:
         sheet.view(index, INDEX_COLUMNS, rows=noted, widths=WIDTHS), noted, "flag"
     )
 
-    with sheet.Scene(video_dir) as scene:
+    with sheet.Scene(video_dir, poster=poster) as scene:
         scene.show(
             sheet.grid_html(
                 before,
@@ -68,6 +85,11 @@ def record(video_dir: Path) -> Path:
                 kind="before",
             ),
             sheet.HOLD_BEFORE,
+        )
+        scene.panel(
+            "before", CARD_BEFORE_LABEL,
+            f"{len(before.table.rows)} .eml in one flat pile"
+            " | every attachment still inside a message",
         )
         scene.show(
             sheet.terminal_html(
@@ -93,6 +115,14 @@ def record(video_dir: Path) -> Path:
             ),
             sheet.HOLD_AFTER / 2,
         )
+        # The noted rows, not the full index: two grids of grey text read the
+        # same at thumbnail size and this one is the beat that sells the piece.
+        scene.panel(
+            "after", CARD_AFTER_LABEL,
+            f"{len(index.rows)} attachments filed"
+            " | rule and destination on every row"
+            f" | {len(noted)} left for a human",
+        )
 
     return scene.video_path
 
@@ -100,10 +130,12 @@ def record(video_dir: Path) -> Path:
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--video-dir", required=True, type=Path)
+    parser.add_argument("--poster", type=Path,
+                        help="write the title card here as PNG (demo/lib/card.py)")
     args = parser.parse_args(argv)
 
     args.video_dir.mkdir(parents=True, exist_ok=True)
-    print(record(args.video_dir))
+    print(record(args.video_dir, args.poster))
     return 0
 
 

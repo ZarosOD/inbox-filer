@@ -440,11 +440,21 @@ Exit codes:
 make test
 ```
 
-303 tests, about 14.5 seconds — 13.9, 14.5 and 14.8 s over three runs — and no
-network. Two of them skip in a dead clone — the `ffprobe` cross-check in
-`tests/test_readme_clip.py`, which needs a toolchain `make demo` downloads.
-They are the suite's only skips and they are a
-cross-check, not a guard. They cover the mailbox reader against the
+316 tests, **about 16 seconds** — 16.2 s on one run on 2026-09-24 — and no
+network. The 13.9, 14.5 and 14.8 s this used to quote were three runs of the
+303-test suite, before `tests/test_demo_card.py` brought thirteen more, and the
+extra ~1.7 s is really the new tests rather than a busy machine: a dead clone
+of the unchanged code ran *faster* on the same day than any of the three clones
+behind the table below (18.6 s against a 20.9 s median). That control is the
+only reason this paragraph can tell the two apart, and it is why the table
+below still quotes its own older figures rather than being overwritten from one
+pass. Four of the 316 skip in a dead clone: the two `ffprobe` cross-checks in
+`tests/test_readme_clip.py`, and in `tests/test_demo_card.py` the comparison of
+`demo/out/poster.png` against frame 0 of the mp4 and the proof that the title
+card's typeface is the vendored one. All four want something `make demo`
+downloads, and all four are cross-checks rather than guards: the guard each one
+backs up runs anyway, over `demo/out/demo.gif` — the file this README embeds —
+which is read end to end with nothing but the standard library. They cover the mailbox reader against the
 generated ground truth, the rule loader's refusals one by one, collisions and
 idempotency at the planner level, and the four acceptance behaviours end to end
 (`tests/test_cli.py`): the dry run changing not one byte, the second run being a
@@ -478,12 +488,12 @@ holding no `uv`:
 | | |
 |---|---|
 | dead clone → filed output (`make run`) | 6.2 s median (5.9, 6.1, 6.2, 6.6, 7.1 over five clones) |
-| dead clone → `make test` (303 tests) | 20.9 s median (20.7, 20.9, 21.0 over three clones), of which 14.3 s is the suite |
+| dead clone → `make test` (316 tests) | 20.9 s median (20.7, 20.9, 21.0 over three clones), of which 14.3 s is the suite |
 | `make plan` / `make run`, venv warm | 0.4 s / 0.5 s |
 | second `make run` | 0.5 s, tree byte-identical |
-| `make demo`, toolchain warm | 22 to 23 s (21.8, 21.8, 22.0, 22.7, 23.0, 23.1 over six runs in two passes) |
+| `make demo`, toolchain warm | 22 to 24 s (21.8, 21.8, 22.0, 22.7, 23.0, 23.1 over six runs in two passes before the title card; 23.9 on one run after it) |
 | `.venv` | 118 MB |
-| demo toolchain | 760 MB, of which 549 MB is the unpacked Chromium |
+| demo toolchain | 762 MB, of which 549 MB is the unpacked Chromium and 2 MB the pinned title-card typeface |
 
 The failure path is driven deliberately too: with a `curl` shimmed to exit 7 and
 no `ensurepip`, `setup.sh` retries, reports the real exit code, prints what to
@@ -515,14 +525,18 @@ make demo
 ```
 
 Rebuilds `demo/out/demo.gif` and `demo/out/demo.mp4` — two encodes of one
-capture — headless from nothing, fetching uv, Playwright, a headless Chromium
-and ffmpeg into `demo/.toolchain/`. Measured on this machine: **22 to 23
+capture — plus `demo/out/poster.png`, the title card at the head of both,
+exported on its own for a platform that wants a cover image rather than
+deriving one from frame 0 — headless from nothing, fetching uv, Playwright, a
+pinned typeface, a headless Chromium
+and ffmpeg into `demo/.toolchain/`. Measured on this machine: **22 to 24
 seconds** to re-record once that toolchain is there (21.8, 21.8, 22.0, 22.7,
-23.0 and 23.1 over six runs in two passes); the first run adds the Chromium
-download on top, which I have not timed — it lands as 549 MB of the 760 MB
+23.0 and 23.1 over six runs in two passes before the title card, and 23.9 on
+one run after it); the first run adds the Chromium
+download on top, which I have not timed — it lands as 549 MB of the 762 MB
 toolchain, but the download wall clock is not a number I can give you.
 
-The clip is 18 s against a 35 s budget that `record.sh` enforces by reading the
+The clip is 19 s against a 35 s budget that `record.sh` enforces by reading the
 encoded file, so the guard is real rather than a note about not shipping a
 two-minute GIF. That sentence is itself checked:
 `tests/test_readme_clip.py` parses the two numbers out of this file and reads
@@ -578,7 +592,7 @@ inbox_filer/
   cli.py                  arguments and exit codes
 rules/office.json         the rules, meant to be read
 fixtures/                 the synthetic mailbox and the script that writes it
-tests/                    303 tests
+tests/                    316 tests
 demo/                     recording scaffolding, shared across pieces
 ```
 
