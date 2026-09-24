@@ -534,7 +534,8 @@ seconds** to re-record once that toolchain is there (21.8, 21.8, 22.0, 22.7,
 23.0 and 23.1 over six runs in two passes before the title card, and 23.9 on
 one run after it); the first run adds the Chromium
 download on top, which I have not timed — it lands as 549 MB of the 762 MB
-toolchain, but the download wall clock is not a number I can give you.
+that `make demo` alone leaves in `demo/.toolchain/`, but the download wall
+clock is not a number I can give you.
 
 The clip is 19 s against a 35 s budget that `record.sh` enforces by reading the
 encoded file, so the guard is real rather than a note about not shipping a
