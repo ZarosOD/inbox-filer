@@ -493,7 +493,7 @@ holding no `uv`:
 | second `make run` | 0.5 s, tree byte-identical |
 | `make demo`, toolchain warm | 22 to 24 s (21.8, 21.8, 22.0, 22.7, 23.0, 23.1 over six runs in two passes before the title card; 23.9 on one run after it) |
 | `.venv` | 118 MB |
-| demo toolchain | 762 MB, of which 549 MB is the unpacked Chromium and 2 MB the pinned title-card typeface |
+| `make demo` toolchain | 762 MB, of which 549 MB is the unpacked Chromium and 2 MB the pinned title-card typeface. `make demo-terminal` adds 24 MB to the same directory and a second Chromium under `~/.cache/rod`. |
 
 The failure path is driven deliberately too: with a `curl` shimmed to exit 7 and
 no `ensurepip`, `setup.sh` retries, reports the real exit code, prints what to
