@@ -440,9 +440,10 @@ Exit codes:
 make test
 ```
 
-303 tests, 12.5 seconds, no network. Two of them skip in a dead clone — the
-`ffprobe` cross-check in `tests/test_readme_clip.py`, which needs a toolchain
-`make demo` downloads. They are the suite's only skips and they are a
+303 tests, about 14.5 seconds — 13.9, 14.5 and 14.8 s over three runs — and no
+network. Two of them skip in a dead clone — the `ffprobe` cross-check in
+`tests/test_readme_clip.py`, which needs a toolchain `make demo` downloads.
+They are the suite's only skips and they are a
 cross-check, not a guard. They cover the mailbox reader against the
 generated ground truth, the rule loader's refusals one by one, collisions and
 idempotency at the planner level, and the four acceptance behaviours end to end
@@ -477,11 +478,12 @@ holding no `uv`:
 | | |
 |---|---|
 | dead clone → filed output (`make run`) | 6.2 s median (5.9, 6.1, 6.2, 6.6, 7.1 over five clones) |
-| dead clone → `make test` (303 tests) | 19.1 s, of which 12.6 s is the suite |
+| dead clone → `make test` (303 tests) | 20.9 s median (20.7, 20.9, 21.0 over three clones), of which 14.3 s is the suite |
 | `make plan` / `make run`, venv warm | 0.4 s / 0.5 s |
 | second `make run` | 0.5 s, tree byte-identical |
-| `make demo`, toolchain warm | 22 s (21.8, 21.8, 22.0 over three runs) |
-| `.venv` / demo toolchain | 6.8 MB / 760 MB |
+| `make demo`, toolchain warm | 22 to 23 s (21.8, 21.8, 22.0, 22.7, 23.0, 23.1 over six runs in two passes) |
+| `.venv` | 118 MB |
+| demo toolchain | 760 MB, of which 549 MB is the unpacked Chromium |
 
 The failure path is driven deliberately too: with a `curl` shimmed to exit 7 and
 no `ensurepip`, `setup.sh` retries, reports the real exit code, prints what to
@@ -514,11 +516,11 @@ make demo
 
 Rebuilds `demo/out/demo.gif` and `demo/out/demo.mp4` — two encodes of one
 capture — headless from nothing, fetching uv, Playwright, a headless Chromium
-and ffmpeg into `demo/.toolchain/`. Measured on this machine: **22 seconds** to
-re-record once that toolchain is there (21.8, 21.8, 22.0 over three runs); the
-first run adds the Chromium download on top, which I have not timed — it lands
-as 549 MB of the 760 MB toolchain, but the download wall clock is not a number
-I can give you.
+and ffmpeg into `demo/.toolchain/`. Measured on this machine: **22 to 23
+seconds** to re-record once that toolchain is there (21.8, 21.8, 22.0, 22.7,
+23.0 and 23.1 over six runs in two passes); the first run adds the Chromium
+download on top, which I have not timed — it lands as 549 MB of the 760 MB
+toolchain, but the download wall clock is not a number I can give you.
 
 The clip is 18 s against a 35 s budget that `record.sh` enforces by reading the
 encoded file, so the guard is real rather than a note about not shipping a
